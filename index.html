@@ -5,16 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Physical Properties of Solution</title>
     <style>
-        /* Center everything */
-        body {
-            text-align: center;
-        }
-
         /* Styling for the title bar */
         #title-bar {
             background-color: #000; /* Set the background color of the title bar to black */
             color: #fff; /* Set the text color of the title to white */
             padding: 10px;
+            text-align: center;
         }
 
         /* Styling for the side menu */
@@ -33,6 +29,7 @@
             background-color: #222;
             color: #fff; /* Set the color of the menu title to white */
             padding: 10px;
+            text-align: center;
         }
 
         #side-menu ul {
@@ -42,21 +39,21 @@
 
         #side-menu ul li {
             padding: 10px;
+            text-align: center;
             cursor: pointer;
             transition: background-color 0.2s;
         }
 
         #side-menu ul li:hover {
             background-color: #555;
-            color: #fff;
         }
 
         /* Styling for the main content area */
         #content {
-            margin-left: 0;
-            transition: margin-left 0.3s;
+            margin-left: 150px; /* Set the left margin to 150px */
+            margin-right: 150px; /* Set the right margin to 150px */
+            transition: margin-left 0.3s, margin-right 0.3s;
             padding: 20px;
-            text-align: justify; /* Justify text in the content area */
         }
 
         /* Button to open/close the side menu */
@@ -98,8 +95,6 @@
 
         /* Adjust the size of the Mind Map image */
         #mind-map-section img {
-            display: block;
-            margin: 0 auto;
             width: 40%;
             height: auto;
         }
@@ -220,19 +215,19 @@
         <!-- Issues concerning this application section -->
         <div id="issues-concerning-application">
             <h3><i><b>Issues concerning this application:</b></i></h3>
-            <p> Colligative properties are characteristics of dissolved particles that depend on concentration but not on the nature of those particles. They frequently have an impact on a solvent's melting and boiling points as well as the vapor pressure above a fluid. There are several restrictions you should be aware of even if the production of a solution from a solute and a solvent is not a matter for concern such as;</p>
-            <ul>
-                <li>The dissolved substance must not dissociate or associate appreciably.</li>
-                <li>There must be no chemical reaction between solute and solvent.</li>
-                <li>When the solution freezes, the pure solvent alone must separate out.</li>
-                <li>For freezing point depression and boiling point elevation methods, the molecular masses of the solution should be very high in order to get reasonable freezing point depressions or boiling point depressions, respectively.</li>
+            <p> Colligative properties are characteristics of dissolved particles that depend on concentration but not on the nature of those particles. They frequently have an impact on a solvent's melting and boiling points as well as the vapor pressure above a fluid. There are several restrictions you should be aware of even if the production of a solution from a solute and a solvent is not a matter for concern such as;<p>
+                    <li>The dissolved substance must not dissociate or associate appreciably.</li>
+                    <li>There must be no chemical reaction between solute and solvent.</li>
+                    <li>When the solution freezes, the pure solvent alone must separate out.</li>
+                    <li>For freezing point depression and boiling point elevation methods the molecular masses of the solution should be very high in order to get reasonable freezing point depressions of boiling point depressions respectively.</li>
+                </ul>
             </ul>
         </div>
 
         <!-- Mind Map section -->
         <div id="mind-map-section">
             <h2><b>Mind Map</b></h2>
-            <img src="mindmap/pasted image 0.png" alt="Mind Map Image" style="display: block; margin: 0 auto; width: 40%; height: auto;">
+            <img src="mindmap/pasted image 0.png" alt="Mind Map Image" style="width: 40%; height: auto;">
         </div>
 
     </div>
@@ -246,10 +241,12 @@
         menuToggle.addEventListener("click", () => {
             if (sideMenu.style.left === "0px") {
                 sideMenu.style.left = "-250px";
-                content.style.marginLeft = "0";
+                content.style.marginLeft = "150px";
+                content.style.marginRight = "150px";
             } else {
                 sideMenu.style.left = "0px";
                 content.style.marginLeft = "250px";
+                content.style.marginRight = "0px";
             }
         });
     </script>
